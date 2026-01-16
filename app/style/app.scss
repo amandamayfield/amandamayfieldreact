@@ -1,0 +1,17 @@
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 16px; // used to calculate em
+  overflow: hidden;
+}
+
+// Home route styling
+.home {
+  &-content {
+    padding: 200px;
+  }
+}
+
+    
+

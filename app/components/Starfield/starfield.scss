@@ -1,0 +1,121 @@
+@use '../../style/colors';
+@use 'sass:math';
+@use 'sass:string';
+
+@function multiple-box-shadow($n, $hex) {
+  $value: '#{math.random(2000)}px #{math.random(2000)}px #{$hex}';
+  @for $i from 2 through $n {
+    $value: '#{$value} , #{math.random(2000)}px #{math.random(2000)}px #{$hex}';
+  }
+  @return string.unquote($value);
+}
+
+$shadows-small: multiple-box-shadow(700, colors.$star-white);
+$shadows-medium: multiple-box-shadow(200, colors.$star-white);
+$shadows-big: multiple-box-shadow(100, colors.$moon-grey);
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }	
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.starfield {
+  height: 500px;
+  background: radial-gradient(ellipse at bottom, colors.$space-blue 0%, colors.$space-black 100%);
+  overflow: hidden;
+  &__stars {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $shadows-small;
+    animation: twinkle 1s linear 1s infinite;
+    animation: animStar 100s linear infinite;
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 2000px;
+      width: 1px;
+      height: 1px;
+      background: transparent;
+      box-shadow: $shadows-small;
+    }
+  }
+  &__stars2 {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $shadows-medium;
+    animation: twinkle 2s linear 1s infinite;
+    animation: animStar 200s linear infinite;
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 2000px;
+      width: 2px;
+      height: 2px;
+      background: transparent;
+      box-shadow: $shadows-medium;
+    }
+  }
+  &__stars3 {
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: $shadows-big;
+    animation: twinkle 3s linear 1s infinite;
+    animation: animStar 300s linear infinite;
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 2000px;
+      width: 3px;
+      height: 3px;
+      background: transparent;
+      box-shadow: $shadows-big;
+    }
+  }
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'lato',sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+    letter-spacing: 10px;
+    margin-top: -60px;
+    h1 {
+      margin: 0;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 6em;
+      background: linear-gradient(colors.$neon-blue, colors.$star-white);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+    
+
+    
+
+
+
+
