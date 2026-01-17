@@ -1,0 +1,16 @@
+@use '../../style/colors';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background-color: colors.$neon-blue;
+  padding: 24px;
+  &-link {
+    text-decoration: none;
+    color: colors.$star-white;
+    font-family: "Urbanist", sans-serif;
+    font-size: 2em;
+  }
+}
