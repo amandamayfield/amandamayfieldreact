@@ -9,6 +9,7 @@ export default function Home() {
   return (
     <>
       <Starfield />
+      <div className="home-content"></div>
     </>
   );
 }
