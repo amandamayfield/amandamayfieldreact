@@ -24,18 +24,36 @@ $shadows-big: multiple-box-shadow(100, colors.$moon-grey);
 }
 
 @keyframes twinkle {
-    0%, 100% {
-        opacity: 0.5;
+    0% {
+      opacity: 0.5;
     }
     50% {
         opacity: 1;
     }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes shootingStar {
+    0% {
+        transform: rotate(315deg) translateX(0);
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(315deg) translateX(-1500px);
+        opacity: 0;
+    }  
 }
 
 .starfield {
   height: 500px;
   background: radial-gradient(ellipse at bottom, colors.$space-blue 0%, colors.$space-black 100%);
   overflow: hidden;
+  position: relative;
   &__stars {
     width: 1px;
     height: 1px;
@@ -90,17 +108,13 @@ $shadows-big: multiple-box-shadow(100, colors.$moon-grey);
   }
   &__title {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 0;
     right: 0;
-    color: #ffffff;
     text-align: center;
-    font-family: 'lato',sans-serif;
-    font-weight: 300;
-    font-size: 50px;
-    letter-spacing: 10px;
-    margin-top: -60px;
     h1 {
+      // color: $neon-blue;
+      letter-spacing: 10px;
       margin: 0;
       font-family: "Space Grotesk", sans-serif;
       font-weight: 600;
@@ -111,6 +125,46 @@ $shadows-big: multiple-box-shadow(100, colors.$moon-grey);
       -webkit-text-fill-color: transparent;
     }
   }
+  &__shoot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1)  ;
+    animation: shootingStar 2s ease-in-out;
+  }
+  &__shoot::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(90deg, #fff, transparent);
+  }
+  &__shoot:nth-child(1) {
+    top: -20px;
+    right: 300px;
+    left: initial;
+    animation-delay: 4s;
+  }
+  // &__shoot:nth-child(2) {
+  //   top: -20px;
+  //   right: 240px;
+  //   left: initial;
+  //   animation-delay: 26.8s;
+    // animation-duration: 1.3s;
+  // }
+  // &__shoot:nth-child(3) {
+  //   top: -20px;
+  //   right: 600px;
+  //   left: initial;
+  //   animation-delay: 1.4s;
+    // animation-duration: 1.8s;
+  // }
 }
     
 
