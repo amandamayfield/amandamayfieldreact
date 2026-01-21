@@ -1,4 +1,5 @@
 @use '../../style/colors';
+@use '../../style/fonts';
 @use 'sass:math';
 @use 'sass:string';
 
@@ -116,7 +117,7 @@ $shadows-big: multiple-box-shadow(100, colors.$moon-grey);
       // color: $neon-blue;
       letter-spacing: 10px;
       margin: 0;
-      font-family: "Space Grotesk", sans-serif;
+      font-family: fonts.$title-text;
       font-weight: 600;
       font-style: normal;
       font-size: 6em;
