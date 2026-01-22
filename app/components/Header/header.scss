@@ -2,33 +2,82 @@
 @use '../../style/fonts';
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
   background-color: colors.$neon-blue;
   padding: 24px;
+  position: relative;
+  display: flex;
+  &-nav {
+    position: fixed;
+    top: 84px;         
+    right: 0;         
+    height: 100%;      
+    width: 100%;
+    margin: 0 auto;        
+    background-color: colors.$star-white; 
+    transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(100%);
+    z-index: 2;
+  }
+  &-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 24px;
+    & > li {
+      width: 100%;
+      border-bottom: 1px solid colors.$moon-grey;
+      display: flex;
+      text-align: center;
+      padding: 8px;
+    }
+  }
   &-link {
     text-decoration: none;
-    color: colors.$star-white;
+    color: colors.$deep-blue;
     font-family: fonts.$heading-text;
     font-size: 1.5rem;
     position: relative;
-    padding-bottom: 5px;
-    &:after {    
-      bottom: 0;
-      content: "";
-      display: block;
-      height: 2px;
-      left: 50%;
-      position: absolute;
-      background: colors.$moon-grey;
-      transition: width 0.3s ease 0s, left 0.3s ease 0s;
-      width: 0;
-    }
-    &:hover:after { 
-      width: 100%; 
-      left: 0; 
-    }
+    width: 100%;
   }
 }
+
+.isOpen {
+  transform: translateY(0);
+}
+
+// .header {
+//   background-color: colors.$neon-blue;
+//   padding: 24px;
+//   &-nav ul {
+//     list-style: none;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     gap: 1rem;
+//     padding: 0;
+//   }
+//   &-link {
+//     text-decoration: none;
+//     color: colors.$star-white;
+//     font-family: fonts.$heading-text;
+//     font-size: 1.5rem;
+//     position: relative;
+//     padding-bottom: 5px;
+//     &:after {    
+//       bottom: 0;
+//       content: "";
+//       display: block;
+//       height: 2px;
+//       left: 50%;
+//       position: absolute;
+//       background: colors.$moon-grey;
+//       transition: width 0.3s ease 0s, left 0.3s ease 0s;
+//       width: 0;
+//     }
+//     &:hover:after { 
+//       width: 100%; 
+//       left: 0; 
+//     }
+//   }
+// }
