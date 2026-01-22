@@ -7,11 +7,28 @@
   align-items: center;
   gap: 1rem;
   background-color: colors.$neon-blue;
-  padding: 1.5rem;
+  padding: 24px;
   &-link {
     text-decoration: none;
     color: colors.$star-white;
     font-family: fonts.$heading-text;
     font-size: 1.5rem;
+    position: relative;
+    padding-bottom: 5px;
+    &:after {    
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      background: colors.$moon-grey;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+    &:hover:after { 
+      width: 100%; 
+      left: 0; 
+    }
   }
 }
