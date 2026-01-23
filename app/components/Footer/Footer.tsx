@@ -1,6 +1,31 @@
 import "./footer.scss";
 import { Link } from "react-router";
 
+type NavLink = {
+  name: string;
+  link: string;
+};
+
+const generalLinks: readonly NavLink[] = [
+  { name: "About", link: "/about" },
+  // { name: "Blog", link: "/blog" },
+  // { name: "Projects", link: "/projects" },
+  { name: "Contact", link: "/contact" },
+] as const;
+
+const socialLinks: readonly NavLink[] = [
+  { name: "Twitter", link: "https://x.com/AmandaMDev" },
+  {
+    name: "Bluesky",
+    link: "https://bsky.app/profile/amandamayfield.bsky.social",
+  },
+  {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/amandamayfielddev/",
+  },
+  { name: "Github", link: "https://github.com/amandamayfield" },
+] as const;
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -11,68 +36,35 @@ export default function Footer() {
         </p>
         <p>&#169; 2026 Amanda Mayfield</p>
       </div>
-      <div className="footer-section">
-        <div className="footer-links">
-          <Link
-            to="/"
-            aria-label="Click to visit the About page"
-            className="footer-link"
-          >
-            About
-          </Link>
-          <Link
-            to="/"
-            aria-label="Click to visit the Contact page"
-            className="footer-link"
-          >
-            Contact
-          </Link>
-          <Link
-            to="/"
-            aria-label="Click to visit the Projects page"
-            className="footer-link"
-          >
-            Projects
-          </Link>
-          <Link
-            to="/"
-            aria-label="Click to visit the Blog page"
-            className="footer-link"
-          >
-            Blog
-          </Link>
-        </div>
-        <div className="footer-links">
-          <Link
-            to="/"
-            aria-label="Click to visit my Twitter profile"
-            className="footer-link"
-          >
-            Twitter
-          </Link>
-          <Link
-            to="/"
-            aria-label="Click to visit my Bluesky profile"
-            className="footer-link"
-          >
-            Bluesky
-          </Link>
-          <Link
-            to="/"
-            aria-label="Click to visit my LinkedIn profile"
-            className="footer-link"
-          >
-            Linkedin
-          </Link>
-          <Link
-            to="/"
-            aria-label="Click to visit my Github profile"
-            className="footer-link"
-          >
-            Github
-          </Link>
-        </div>
-      </div>
+      <nav className="footer-links">
+        <ul>
+          {generalLinks.map((link) => (
+            <li key={link.name}>
+              <Link
+                to={link.link}
+                aria-label={`Click to visit the ${link.name} page`}
+                className="footer-link"
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <ul>
+          {socialLinks.map((link) => (
+            <li key={link.name}>
+              <Link
+                to={link.link}
+                aria-label={`Click to visit my ${link.name} profile`}
+                className="footer-link"
+                target="_blank"
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </footer>
   );
 }
