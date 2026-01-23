@@ -1,0 +1,32 @@
+@use '../../style/colors';
+@use '../../style/fonts';
+
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 colors.$neon-blue };
+}
+
+.skills {
+  &-contain {
+    border-top: 1px solid colors.$moon-grey;
+    border-bottom: 1px solid colors.$moon-grey;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem 3rem;
+    padding: 48px 0;
+  }
+  &-pill {
+    border: 2px solid colors.$deep-blue;
+    color: colors.$deep-blue;
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+    font-family: fonts.$heading-text;
+    font-weight: 600;
+    &:hover {
+      animation: pulse 1s;
+      box-shadow: 0 0 0 2em transparent;
+    }
+  }
+}
+
