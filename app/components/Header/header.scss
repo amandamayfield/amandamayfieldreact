@@ -1,6 +1,10 @@
 @use '../../style/colors';
 @use '../../style/fonts';
 
+.mobile-nav {
+  display: flex;
+}
+
 .header {
   background-color: colors.$neon-blue;
   padding: 24px;
@@ -49,38 +53,51 @@
   transform: translateY(0);
 }
 
-// .header {
-//   background-color: colors.$neon-blue;
-//   padding: 24px;
-//   &-nav ul {
-//     list-style: none;
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     gap: 1rem;
-//     padding: 0;
-//   }
-//   &-link {
-//     text-decoration: none;
-//     color: colors.$star-white;
-//     font-family: fonts.$heading-text;
-//     font-size: 1.5rem;
-//     position: relative;
-//     padding-bottom: 5px;
-//     &:after {    
-//       bottom: 0;
-//       content: "";
-//       display: block;
-//       height: 2px;
-//       left: 50%;
-//       position: absolute;
-//       background: colors.$moon-grey;
-//       transition: width 0.3s ease 0s, left 0.3s ease 0s;
-//       width: 0;
-//     }
-//     &:hover:after { 
-//       width: 100%; 
-//       left: 0; 
-//     }
-//   }
-// }
+@media screen and (min-width: 600px) {
+  .mobile-nav {
+    display: none;
+  }
+
+  .header {
+    &-nav {
+      position: static;
+      background-color: transparent;
+      transform: translateY(0);
+    }
+    &-links {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around; // change to space-between
+      padding: 0;
+      list-style: none;
+      margin: 0;
+      & > li {
+        border: none;
+        width: auto;
+      }
+    }
+    &-link {
+      color: colors.$star-white;
+      padding: 0 0 5px 0;
+      &::after {    
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: colors.$moon-grey;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+      &:hover {
+        background-color: transparent;
+      }
+      &:hover::after { 
+        width: 100%; 
+        left: 0; 
+      }
+    }
+  }
+}
+

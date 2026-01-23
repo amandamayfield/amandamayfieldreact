@@ -11,15 +11,15 @@ type NavLink = {
 
 const navLinks: readonly NavLink[] = [
   { name: "About", link: "/about" },
-  { name: "Blog", link: "/blog" },
-  { name: "Projects", link: "/projects" },
+  // { name: "Blog", link: "/blog" },
+  // { name: "Projects", link: "/projects" },
   { name: "Contact", link: "/contact" },
 ] as const;
 
 export default function Header() {
   return (
     <header className="header">
-      {/* <DesktopNav /> */}
+      <DesktopNav />
       <MobileNav />
     </header>
   );
@@ -34,7 +34,7 @@ function MobileNav() {
   }
 
   return (
-    <>
+    <div className="mobile-nav">
       <Link
         to="/"
         aria-label="Click to visit the Home page"
@@ -59,20 +59,42 @@ function MobileNav() {
           ))}
         </ul>
       </nav>
-    </>
+    </div>
   );
 }
 
 function DesktopNav() {
+  // const leftLinks = navLinks.slice(0, 2); // About, Blog
+  // const rightLinks = navLinks.slice(2); // Projects, Contact
+
+  const leftLinks = navLinks.slice(0, 1); // About
+  const rightLinks = navLinks.slice(1); // Contact
+
   return (
     <nav className="header-nav">
       <ul className="header-links">
-        {navLinks.map((link) => (
+        {leftLinks.map((link) => (
           <li key={link.name}>
             <Link
               to={link.link}
               className="header-link"
-              aria-label="Click to visit the {link.name} page"
+              aria-label={`Click to visit the ${link.name} page`}
+            >
+              {link.name}
+            </Link>
+          </li>
+        ))}
+        <li>
+          <Link to="/" aria-label="Click to visit the Home page">
+            <Logo />
+          </Link>
+        </li>
+        {rightLinks.map((link) => (
+          <li key={link.name}>
+            <Link
+              to={link.link}
+              className="header-link"
+              aria-label={`Click to visit the ${link.name} page`}
             >
               {link.name}
             </Link>
