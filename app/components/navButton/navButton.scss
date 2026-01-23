@@ -1,0 +1,47 @@
+@use '../../style/colors';
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 24px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  background: none;
+  padding: 0;
+  border: none;
+  & > span, > span::before, > span::after {
+    display: block;
+    position: absolute;
+    right: 0;
+    height: 2px;
+    background-color: colors.$star-white;
+    transition-duration: .25s;
+  }
+  & > span {
+    width: 30px;
+  }
+  & > span::before {
+    content: '';
+    top: -12px;
+    width: 24px;
+  }
+  & > span::after {
+    content: '';
+    top: 12px;
+    width: 36px;
+  }
+  & > span.open {
+    transform: rotate(45deg);
+  }
+  & > span.open::before {
+    top: 0;
+    width: 36px;
+    transform: rotate(0);
+  }
+  & > span.open::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+}
