@@ -10,7 +10,6 @@ type NavLink = {
 };
 
 const navLinks: readonly NavLink[] = [
-  { name: "Home", link: "/" },
   { name: "About", link: "/about" },
   { name: "Blog", link: "/blog" },
   { name: "Projects", link: "/projects" },
@@ -30,9 +29,19 @@ function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  function closeNav() {
+    setIsOpen(false);
+  }
+
   return (
     <>
-      <Logo />
+      <Link
+        to="/"
+        aria-label="Click to visit the Home page"
+        onClick={closeNav}
+      >
+        <Logo />
+      </Link>
       <NavButton isOpen={isOpen} onClick={toggleMenu} />
       <nav className={`header-nav ${isOpen ? "isOpen" : ""}`}>
         <ul className="header-links">

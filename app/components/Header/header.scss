@@ -29,7 +29,6 @@
       border-bottom: 1px solid colors.$moon-grey;
       display: flex;
       text-align: center;
-      padding: 8px;
     }
   }
   &-link {
@@ -39,6 +38,10 @@
     font-size: 1.5rem;
     position: relative;
     width: 100%;
+    padding: 16px;
+    &:hover {
+      background-color: colors.$moon-grey;
+    }
   }
 }
 
