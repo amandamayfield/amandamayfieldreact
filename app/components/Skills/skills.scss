@@ -18,10 +18,10 @@
   &-pill {
     border: 2px solid colors.$deep-blue;
     color: colors.$deep-blue;
-    border-radius: 12px;
+    border-radius: 24px;
     padding: 12px;
     text-align: center;
-    font-family: fonts.$heading-text;
+    font-family: fonts.$normal-text;
     font-weight: 600;
     &:hover {
       animation: pulse 1s;
