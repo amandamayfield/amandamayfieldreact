@@ -1,20 +1,22 @@
 import "./intro.scss";
 import { Link } from "react-router";
+import { motion } from "motion/react";
 import amandaIntro from "../../assets/intro-amanda.jpg";
+import IntroTitle from "../IntroTitle/IntroTitle";
 
 export default function Intro() {
   return (
     <div className="intro-contain">
-      <h2 className="intro-title">
-        <span>Engineer</span>
-        <span>Speaker</span>
-        <span>Mentor</span>
-      </h2>
+      <IntroTitle />
       <div className="intro-content">
         <div className="intro-side">
           <div className="intro-img">
-            <img
+            <motion.img
               src={amandaIntro}
+              transition={{ duration: 2 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.5 }}
               alt="Photo of Amanda Mayfield smiling, surrounded by cherry blossoms"
             />
           </div>

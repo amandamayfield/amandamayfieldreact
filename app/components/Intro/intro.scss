@@ -11,23 +11,6 @@
     flex-direction: column;
     gap: 2rem;
   }
-  &-title {
-    font-size: 4rem;
-    font-family: fonts.$title-text;
-    padding-bottom: 24px;
-  }
-  &-title > span {
-    display: block;
-  }
-  &-title > span:nth-child(1) {
-    color: colors.$deep-blue;
-  }
-  &-title > span:nth-child(2) {
-    color: colors.$deep-purple;
-  }
-  &-title > span:nth-child(3) {
-    color: colors.$bright-magenta;
-  }
   &-side {
     display: flex;
     flex-direction: column;
@@ -62,13 +45,7 @@
     &-content {
       flex-direction: row;
       justify-content: space-around;
-    }
-    &-title {
-      padding-bottom: 48px;
-    }
-    &-title > span {
-      display: inline-block;
-      padding: 0 12px;
+      padding: 0 2rem;
     }
     &-side:nth-child(2) {
       flex: 0 1 50%;
