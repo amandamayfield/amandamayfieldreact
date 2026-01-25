@@ -23,9 +23,21 @@ p, h1, h2, h3, h4, h5, h6 {
 // Home route styling
 .home {
   &-contain {
-    padding: 48px;
+    padding: 48px 0;
   }
 }
+
+@media screen and (min-width: 600px) {
+  .home {
+    &-contain {
+      padding: 100px 0;
+    }
+  }
+}
+
+
+
+
 
     
 

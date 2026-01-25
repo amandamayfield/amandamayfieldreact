@@ -114,13 +114,12 @@ $shadows-big: multiple-box-shadow(100, colors.$moon-grey);
     right: 0;
     text-align: center;
     h1 {
-      // color: $neon-blue;
       letter-spacing: 10px;
       margin: 0;
       font-family: fonts.$title-text;
       font-weight: 600;
       font-style: normal;
-      font-size: 6em;
+      font-size: clamp(4rem, 100vw, 6rem);
       background: linear-gradient(colors.$neon-blue, colors.$star-white);
       background-clip: text;
       -webkit-text-fill-color: transparent;
