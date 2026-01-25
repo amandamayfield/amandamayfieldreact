@@ -8,25 +8,34 @@
 
 .skills {
   &-contain {
-    border-top: 1px solid colors.$moon-grey;
-    border-bottom: 1px solid colors.$moon-grey;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    height: 160px;
+    background-color: colors.$pale-grey;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  &-scroll {
+    display: flex;
     gap: 2rem 3rem;
-    padding: 48px 0;
   }
   &-pill {
-    border: 2px solid colors.$deep-blue;
-    color: colors.$deep-blue;
+    background-color: colors.$deep-purple;
+    color: colors.$star-white;
     border-radius: 24px;
     padding: 12px;
     text-align: center;
     font-family: fonts.$normal-text;
     font-weight: 600;
+    display: flex;
+    gap: .5rem;
     &:hover {
       animation: pulse 1s;
       box-shadow: 0 0 0 2em transparent;
     }
+  }
+  &-icon {
+    font-size: 20px;
+    color: colors.$star-white;
   }
 }
 
