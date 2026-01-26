@@ -1,7 +1,7 @@
 import type { Route } from "./+types/home";
 import Starfield from "~/components/Starfield/Starfield";
 import Skills from "~/components/Skills/Skills";
-import Intro from "~/components/Intro/Intro";
+import IntroHome from "~/components/IntroHome/IntroHome";
 import BentoDivider from "~/components/BentoDivider/BentoDivider";
 import IntroTitle from "~/components/IntroTitle/IntroTitle";
 
@@ -16,7 +16,7 @@ export default function Home() {
       <BentoDivider />
       <IntroTitle />
       <BentoDivider />
-      <Intro />
+      <IntroHome />
       <BentoDivider />
       <Skills />
       <BentoDivider />

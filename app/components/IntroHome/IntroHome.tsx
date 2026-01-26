@@ -1,13 +1,13 @@
-import "./intro.scss";
+import "./introHome.scss";
 import { Link } from "react-router";
 import { motion } from "motion/react";
 
-export default function Intro() {
+export default function IntroHome() {
   return (
-    <section className="intro-contain">
-      <div className="intro-content">
+    <section className="intro-home__contain">
+      <div className="intro-home__content">
         <motion.div
-          className="intro-bento"
+          className="intro-home__bento"
           transition={{ duration: 1 }}
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -17,7 +17,7 @@ export default function Intro() {
           }}
         ></motion.div>
         <motion.div
-          className="intro-bento"
+          className="intro-home__bento"
           transition={{ duration: 1 }}
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -39,7 +39,7 @@ export default function Intro() {
           </p>
         </motion.div>
         <motion.div
-          className="intro-bento"
+          className="intro-home__bento"
           transition={{ duration: 1 }}
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -57,7 +57,7 @@ export default function Intro() {
           </Link>
         </motion.div>
         <motion.div
-          className="intro-bento"
+          className="intro-home__bento"
           transition={{ duration: 1 }}
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -67,7 +67,7 @@ export default function Intro() {
           }}
         ></motion.div>
         <motion.div
-          className="intro-bento polka-dot"
+          className="intro-home__bento polka-dot"
           transition={{ duration: 1 }}
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
