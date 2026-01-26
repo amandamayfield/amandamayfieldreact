@@ -1,27 +1,25 @@
 import "./intro.scss";
 import { Link } from "react-router";
 import { motion } from "motion/react";
-import amandaIntro from "../../assets/intro-amanda.jpg";
-import IntroTitle from "../IntroTitle/IntroTitle";
 
 export default function Intro() {
   return (
     <div className="intro-contain">
-      <IntroTitle />
       <div className="intro-content">
-        <div className="intro-side">
-          <div className="intro-img">
-            <motion.img
-              src={amandaIntro}
-              transition={{ duration: 2 }}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, amount: 0.5 }}
-              alt="Photo of Amanda Mayfield smiling, surrounded by cherry blossoms"
-            />
-          </div>
-        </div>
-        <div className="intro-side">
+        <motion.div
+          className="intro-bento"
+          transition={{ duration: 1 }}
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+        ></motion.div>
+        <motion.div
+          className="intro-bento"
+          transition={{ duration: 1 }}
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
           <p>
             I am a Senior Frontend Software Engineer with over 7 years
             of experience building high-traffic platforms for Fortune
@@ -33,14 +31,36 @@ export default function Intro() {
             my careers have taught me to strive for precision,
             usability, and quality in my designs.
           </p>
+        </motion.div>
+        <motion.div
+          className="intro-bento"
+          transition={{ duration: 1 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          whileTap={{ scale: 0.9 }}
+        >
           <Link
             to="/about"
-            className="intro-link"
             aria-label="Click to visit the About page"
           >
             Learn more about me
           </Link>
-        </div>
+        </motion.div>
+        <motion.div
+          className="intro-bento"
+          transition={{ duration: 1 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+        ></motion.div>
+        <motion.div
+          className="intro-bento polka-dot"
+          transition={{ duration: 1 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+        ></motion.div>
       </div>
     </div>
   );
