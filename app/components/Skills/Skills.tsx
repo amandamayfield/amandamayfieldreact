@@ -88,7 +88,7 @@ export default function Skills() {
   }, [xTranslation, width]);
 
   return (
-    <div className="skills-contain">
+    <section className="skills-contain">
       <h3>Technologies used</h3>
       <div className="skills-scroll__contain">
         <motion.div
@@ -104,6 +104,6 @@ export default function Skills() {
           ))}
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 }

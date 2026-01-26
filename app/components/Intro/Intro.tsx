@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 export default function Intro() {
   return (
-    <div className="intro-contain">
+    <section className="intro-contain">
       <div className="intro-content">
         <motion.div
           className="intro-bento"
@@ -77,6 +77,6 @@ export default function Intro() {
           }}
         ></motion.div>
       </div>
-    </div>
+    </section>
   );
 }
