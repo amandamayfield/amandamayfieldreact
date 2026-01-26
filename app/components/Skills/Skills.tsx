@@ -89,18 +89,21 @@ export default function Skills() {
 
   return (
     <div className="skills-contain">
-      <motion.div
-        className="skills-scroll"
-        ref={ref}
-        style={{ x: xTranslation }}
-      >
-        {[...skillSet, ...skillSet].map((skill, index) => (
-          <div className="skills-pill" key={skill.name + index}>
-            {skill.logo}
-            <p>{skill.name}</p>
-          </div>
-        ))}
-      </motion.div>
+      <h3>Technologies used</h3>
+      <div className="skills-scroll__contain">
+        <motion.div
+          className="skills-scroll"
+          ref={ref}
+          style={{ x: xTranslation }}
+        >
+          {[...skillSet, ...skillSet].map((skill, index) => (
+            <div className="skills-pill" key={skill.name + index}>
+              {skill.logo}
+              <p>{skill.name}</p>
+            </div>
+          ))}
+        </motion.div>
+      </div>
     </div>
   );
 }

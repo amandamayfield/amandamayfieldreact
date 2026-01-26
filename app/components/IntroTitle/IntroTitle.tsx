@@ -24,7 +24,7 @@ function IntroTitleDesktop() {
         <motion.h2
           key={w.word}
           className="intro-title__text"
-          initial={{ opacity: 0, y: 100 }}
+          initial={{ opacity: 0, y: 60 }}
           whileInView={{
             opacity: 1,
             y: 0,
@@ -35,6 +35,7 @@ function IntroTitleDesktop() {
           }}
           viewport={{
             once: true,
+            amount: 0.5,
           }}
         >
           {w.word}
@@ -56,13 +57,14 @@ function IntroTitleMobile() {
             opacity: 1,
             y: 0,
             transition: {
-              duration: 1.3,
+              duration: 1.5,
               ease: "easeOut",
               default: { type: "spring" },
             },
           }}
           viewport={{
             once: true,
+            amount: 0.5,
           }}
         >
           {w.word}

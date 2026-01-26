@@ -55,7 +55,9 @@ export default function App() {
   return (
     <>
       <Header />
-      <Outlet />
+      <div className="app-contain">
+        <Outlet />
+      </div>
       <Footer />
     </>
   );

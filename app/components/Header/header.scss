@@ -3,21 +3,22 @@
 
 .mobile-nav {
   display: flex;
+  margin: 0;
 }
 
 .header {
   background-color: colors.$neon-blue;
-  padding: 24px;
+  padding: 16px;
   position: relative;
   display: flex;
   &-nav {
     position: fixed;
-    top: 84px;         
+    top: 68px;         
     right: 0;         
     height: 100%;      
     width: 100%;
     margin: 0 auto;        
-    background-color: colors.$star-white; 
+    background-color: colors.$pale-grey; 
     transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(100%);
     z-index: 2;
@@ -30,9 +31,10 @@
     padding: 24px;
     & > li {
       width: 100%;
-      border-bottom: 1px solid colors.$moon-grey;
+      border-bottom: 1px solid colors.$dark-grey;
       display: flex;
       text-align: center;
+      margin: 5px 0 0 0;
     }
   }
   &-link {
@@ -44,7 +46,7 @@
     width: 100%;
     padding: 16px;
     &:hover {
-      background-color: colors.$moon-grey;
+      background-color: colors.$dark-grey;
     }
   }
 }
@@ -86,7 +88,7 @@
         height: 2px;
         left: 50%;
         position: absolute;
-        background: colors.$moon-grey;
+        background: colors.$space-blue;
         transition: width 0.3s ease 0s, left 0.3s ease 0s;
         width: 0;
       }

@@ -1,0 +1,7 @@
+@use '../../style/colors';
+
+.bento-divider {
+  padding: 12px;
+  border-top: 1px solid colors.$med-grey;
+  border-bottom: 1px solid colors.$med-grey;
+}

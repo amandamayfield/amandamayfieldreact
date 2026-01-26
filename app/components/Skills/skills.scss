@@ -8,15 +8,24 @@
 
 .skills {
   &-contain {
-    height: 160px;
     background-color: colors.$pale-grey;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+    & > h3 {
+      color: colors.$space-blue;
+      font-family: fonts.$normal-text;
+      font-size: 2rem;
+      text-align: center;
+      padding-top: 24px;
+    }
   }
   &-scroll {
     display: flex;
     gap: 2rem 3rem;
+    &__contain {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      height: 92px;
+    }
   }
   &-pill {
     background-color: colors.$deep-purple;
