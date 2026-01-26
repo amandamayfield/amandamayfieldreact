@@ -1,4 +1,5 @@
 import "./starfield.scss";
+import StarfieldTitle from "../StarfieldTitle/StarfieldTitle";
 
 export default function Starfield() {
   return (
@@ -10,9 +11,7 @@ export default function Starfield() {
         <div className="starfield__stars"></div>
         <div className="starfield__stars2"></div>
         <div className="starfield__stars3"></div>
-        <div className="starfield__title">
-          <h1>Amanda Mayfield</h1>
-        </div>
+        <StarfieldTitle />
       </div>
     </div>
   );
