@@ -12,6 +12,9 @@ export default function Intro() {
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.5 }}
+          whileHover={{
+            scale: 0.95,
+          }}
         ></motion.div>
         <motion.div
           className="intro-bento"
@@ -19,6 +22,9 @@ export default function Intro() {
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.5 }}
+          whileHover={{
+            scale: 0.95,
+          }}
         >
           <p>
             I am a Senior Frontend Software Engineer with over 7 years
@@ -39,6 +45,9 @@ export default function Intro() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           whileTap={{ scale: 0.9 }}
+          whileHover={{
+            scale: 0.95,
+          }}
         >
           <Link
             to="/about"
@@ -53,6 +62,9 @@ export default function Intro() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
+          whileHover={{
+            scale: 0.95,
+          }}
         ></motion.div>
         <motion.div
           className="intro-bento polka-dot"
@@ -60,6 +72,9 @@ export default function Intro() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
+          whileHover={{
+            scale: 0.95,
+          }}
         ></motion.div>
       </div>
     </div>
