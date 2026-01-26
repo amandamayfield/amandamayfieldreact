@@ -33,6 +33,9 @@ function IntroTitleDesktop() {
               duration: 1,
             },
           }}
+          whileHover={{
+            scale: 0.9,
+          }}
           viewport={{
             once: true,
             amount: 0.5,

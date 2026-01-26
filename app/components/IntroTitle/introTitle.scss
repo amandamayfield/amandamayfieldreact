@@ -13,17 +13,19 @@
     gap: 1.5rem;
   }
   &__text {
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-size: clamp(2rem, 6vw, 4rem);
     font-family: fonts.$title-text;
     text-align: center;
+    color: colors.$space-blue;
+    transition: color 0.5s ease 0s;
   }
-  &__text:nth-child(1) {
+  &__text:hover:nth-child(1) {
     color: colors.$deep-blue;
   }
-  &__text:nth-child(2) {
+  &__text:hover:nth-child(2) {
     color: colors.$deep-purple;
   }
-  &__text:nth-child(3) {
+  &__text:hover:nth-child(3) {
     color: colors.$bright-magenta;
   }
 }
@@ -37,9 +39,8 @@
     &__desktop {
       display: flex;
       flex-direction: row;
-      padding-bottom: 0;
+      flex-wrap: wrap;
       justify-content: center;
-      padding-bottom: 100px;
       gap: 3rem;
       padding: 48px 0;
     }
