@@ -1,30 +1,7 @@
 import "./footer.scss";
 import { Link } from "react-router";
-
-type NavLink = {
-  name: string;
-  link: string;
-};
-
-const generalLinks: readonly NavLink[] = [
-  { name: "About", link: "/about" },
-  // { name: "Blog", link: "/blog" },
-  // { name: "Projects", link: "/projects" },
-  { name: "Contact", link: "/contact" },
-] as const;
-
-const socialLinks: readonly NavLink[] = [
-  { name: "Twitter", link: "https://x.com/AmandaMDev" },
-  {
-    name: "Bluesky",
-    link: "https://bsky.app/profile/amandamayfield.bsky.social",
-  },
-  {
-    name: "LinkedIn",
-    link: "https://www.linkedin.com/in/amandamayfielddev/",
-  },
-  { name: "Github", link: "https://github.com/amandamayfield" },
-] as const;
+import { generalLinks } from "~/utils/getGeneralLinks";
+import { socialLinks } from "~/utils/getSocialLinks";
 
 export default function Footer() {
   return (
