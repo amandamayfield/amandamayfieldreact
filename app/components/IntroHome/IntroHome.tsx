@@ -8,23 +8,23 @@ export default function IntroHome() {
       <div className="intro-home__content">
         <motion.div
           className="intro-home__bento"
-          transition={{ duration: 1 }}
           initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          whileHover={{
-            scale: 0.95,
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 1 },
           }}
+          viewport={{ once: true, amount: 0.5 }}
         ></motion.div>
         <motion.div
           className="intro-home__bento"
-          transition={{ duration: 1 }}
           initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          whileHover={{
-            scale: 0.95,
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 1 },
           }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <p>
             I am a Senior Frontend Software Engineer with over 7 years
@@ -40,13 +40,17 @@ export default function IntroHome() {
         </motion.div>
         <motion.div
           className="intro-home__bento"
-          transition={{ duration: 1 }}
           initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1 },
+          }}
           viewport={{ once: true, amount: 0.5 }}
           whileTap={{ scale: 0.9 }}
           whileHover={{
-            scale: 0.95,
+            scale: 0.97,
+            transition: { duration: 0.3 },
           }}
         >
           <Link
@@ -58,23 +62,23 @@ export default function IntroHome() {
         </motion.div>
         <motion.div
           className="intro-home__bento"
-          transition={{ duration: 1 }}
           initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          whileHover={{
-            scale: 0.95,
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1 },
           }}
+          viewport={{ once: true, amount: 0.5 }}
         ></motion.div>
         <motion.div
           className="intro-home__bento polka-dot"
-          transition={{ duration: 1 }}
           initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          whileHover={{
-            scale: 0.95,
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1 },
           }}
+          viewport={{ once: true, amount: 0.5 }}
         ></motion.div>
       </div>
     </section>
