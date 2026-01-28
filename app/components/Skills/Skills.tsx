@@ -15,8 +15,14 @@ import {
 } from "react-icons/fa";
 import { RiTailwindCssFill, RiJavascriptFill } from "react-icons/ri";
 import { SiTypescript, SiMysql } from "react-icons/si";
+import type { ReactNode } from "react";
 
-const skillSet = [
+type Skill = {
+  name: string;
+  logo: ReactNode;
+};
+
+const skillSet: readonly Skill[] = [
   {
     logo: <FaHtml5 className="skills-icon"></FaHtml5>,
     name: "HTML5",
@@ -64,7 +70,7 @@ const skillSet = [
     logo: <SiMysql className="skills-icon"></SiMysql>,
     name: "MySQL",
   },
-];
+] as const;
 
 export default function Skills() {
   let [ref, { width }] = useMeasure();
