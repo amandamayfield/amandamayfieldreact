@@ -1,3 +1,4 @@
+import "./socialsLinks.scss";
 import { Link } from "react-router";
 import { motion } from "motion/react";
 import { socialLinks } from "~/components/SocialLinks/getSocialLinks";
@@ -24,7 +25,10 @@ export default function SocialLinksLogo({ passedClass }: LinkProps) {
             aria-label={`Click to visit my ${link.name} profile`}
             target="_blank"
           >
-            <span>{link.name}</span>
+            <div>
+              <span>{link.logo}</span>
+              <span>{link.name}</span>
+            </div>
           </Link>
         </motion.div>
       ))}
