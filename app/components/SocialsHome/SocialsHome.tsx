@@ -51,15 +51,33 @@ export default function SocialsHome() {
             Together
           </motion.p>
         </motion.div>
-        <motion.div className="socials-home__bento polka-dot"></motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: -75 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1 },
+          }}
+          viewport={{ once: true, amount: 0.5 }}
+          className="socials-home__bento polka-dot"
+        ></motion.div>
         <motion.div
           className="socials-home__bento"
           whileHover={{
             scale: 0.97,
             transition: { duration: 0.3 },
           }}
+          initial={{ opacity: 0, x: 75 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 1 },
+          }}
+          viewport={{ once: true, amount: 0.5 }}
         >
-          <Link to="/contact">Contact me</Link>
+          <Link to="/contact">
+            <span>Contact me</span>
+          </Link>
         </motion.div>
         {socialLinks.map((link) => (
           <motion.div
@@ -69,17 +87,33 @@ export default function SocialsHome() {
               scale: 0.97,
               transition: { duration: 0.3 },
             }}
+            initial={{ opacity: 0, x: 75 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 1 },
+            }}
+            viewport={{ once: true, amount: 0.5 }}
           >
             <Link
               to={link.link}
               aria-label={`Click to visit my ${link.name} profile`}
               target="_blank"
             >
-              {link.name}
+              <span>{link.name}</span>
             </Link>
           </motion.div>
         ))}
-        <motion.div className="socials-home__bento polka-dot"></motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 75 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1 },
+          }}
+          viewport={{ once: true, amount: 0.5 }}
+          className="socials-home__bento polka-dot"
+        ></motion.div>
       </div>
     </section>
   );

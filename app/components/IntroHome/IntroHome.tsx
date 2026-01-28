@@ -8,7 +8,7 @@ export default function IntroHome() {
       <div className="intro-home__content">
         <motion.div
           className="intro-home__bento"
-          initial={{ opacity: 0, x: -100 }}
+          initial={{ opacity: 0, x: -75 }}
           whileInView={{
             opacity: 1,
             x: 0,
@@ -18,7 +18,7 @@ export default function IntroHome() {
         ></motion.div>
         <motion.div
           className="intro-home__bento"
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, x: 75 }}
           whileInView={{
             opacity: 1,
             x: 0,
@@ -40,7 +40,7 @@ export default function IntroHome() {
         </motion.div>
         <motion.div
           className="intro-home__bento"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 75 }}
           whileInView={{
             opacity: 1,
             y: 0,
@@ -57,12 +57,12 @@ export default function IntroHome() {
             to="/about"
             aria-label="Click to visit the About page"
           >
-            Learn more about me
+            <span>Learn more about me</span>
           </Link>
         </motion.div>
         <motion.div
           className="intro-home__bento"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 75 }}
           whileInView={{
             opacity: 1,
             y: 0,
@@ -72,7 +72,7 @@ export default function IntroHome() {
         ></motion.div>
         <motion.div
           className="intro-home__bento polka-dot"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 75 }}
           whileInView={{
             opacity: 1,
             y: 0,

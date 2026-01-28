@@ -12,7 +12,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Starfield />
       <BentoDivider />
       <IntroTitle />
@@ -22,6 +22,6 @@ export default function Home() {
       <Skills />
       <BentoDivider />
       <SocialsHome />
-    </>
+    </main>
   );
 }
