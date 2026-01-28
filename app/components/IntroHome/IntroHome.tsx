@@ -8,7 +8,7 @@ export default function IntroHome() {
       <div className="intro-home__content">
         <motion.div
           className="intro-home__bento"
-          initial={{ opacity: 0, x: -75 }}
+          initial={{ opacity: 0, x: -100 }}
           whileInView={{
             opacity: 1,
             x: 0,
@@ -16,16 +16,7 @@ export default function IntroHome() {
           }}
           viewport={{ once: true, amount: 0.5 }}
         ></motion.div>
-        <motion.div
-          className="intro-home__bento"
-          initial={{ opacity: 0, x: 75 }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            transition: { duration: 1 },
-          }}
-          viewport={{ once: true, amount: 0.5 }}
-        >
+        <motion.div className="intro-home__bento">
           <p>
             I am a Senior Frontend Software Engineer with over 7 years
             of experience building high-traffic platforms for Fortune
@@ -40,13 +31,6 @@ export default function IntroHome() {
         </motion.div>
         <motion.div
           className="intro-home__bento"
-          initial={{ opacity: 0, y: 75 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: { duration: 1 },
-          }}
-          viewport={{ once: true, amount: 0.5 }}
           whileTap={{ scale: 0.9 }}
           whileHover={{
             scale: 0.97,
@@ -60,26 +44,8 @@ export default function IntroHome() {
             <span>Learn more about me</span>
           </Link>
         </motion.div>
-        <motion.div
-          className="intro-home__bento"
-          initial={{ opacity: 0, y: 75 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: { duration: 1 },
-          }}
-          viewport={{ once: true, amount: 0.5 }}
-        ></motion.div>
-        <motion.div
-          className="intro-home__bento polka-dot"
-          initial={{ opacity: 0, y: 75 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: { duration: 1 },
-          }}
-          viewport={{ once: true, amount: 0.5 }}
-        ></motion.div>
+        <motion.div className="intro-home__bento"></motion.div>
+        <motion.div className="intro-home__bento polka-dot"></motion.div>
       </div>
     </section>
   );

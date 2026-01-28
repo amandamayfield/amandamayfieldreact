@@ -51,29 +51,14 @@ export default function SocialsHome() {
             Together
           </motion.p>
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: -75 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: { duration: 1 },
-          }}
-          viewport={{ once: true, amount: 0.5 }}
-          className="socials-home__bento polka-dot"
-        ></motion.div>
+        <motion.div className="socials-home__bento polka-dot"></motion.div>
         <motion.div
           className="socials-home__bento"
           whileHover={{
             scale: 0.97,
             transition: { duration: 0.3 },
           }}
-          initial={{ opacity: 0, x: 75 }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            transition: { duration: 1 },
-          }}
-          viewport={{ once: true, amount: 0.5 }}
+          whileTap={{ scale: 0.9, opacity: 0.9 }}
         >
           <Link to="/contact">
             <span>Contact me</span>
@@ -87,13 +72,7 @@ export default function SocialsHome() {
               scale: 0.97,
               transition: { duration: 0.3 },
             }}
-            initial={{ opacity: 0, x: 75 }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-              transition: { duration: 1 },
-            }}
-            viewport={{ once: true, amount: 0.5 }}
+            whileTap={{ scale: 0.9, opacity: 0.9 }}
           >
             <Link
               to={link.link}
@@ -104,16 +83,7 @@ export default function SocialsHome() {
             </Link>
           </motion.div>
         ))}
-        <motion.div
-          initial={{ opacity: 0, y: 75 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: { duration: 1 },
-          }}
-          viewport={{ once: true, amount: 0.5 }}
-          className="socials-home__bento polka-dot"
-        ></motion.div>
+        <motion.div className="socials-home__bento polka-dot"></motion.div>
       </div>
     </section>
   );
