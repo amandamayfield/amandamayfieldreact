@@ -1,0 +1,149 @@
+@use '../../style/colors';
+@use '../../style/fonts';
+
+.socials-home {
+  &__contain {
+    padding: 48px 24px;
+  }
+  &__content {
+    display: grid; 
+    height: 100%; 
+    width: 100%; 
+    grid-template-columns: repeat(1, 1fr); 
+    grid-template-rows: repeat(1, 1fr); 
+    gap: 24px; 
+  }
+  &__bento {
+    border-radius: 12px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    & > a {
+      text-decoration: none;
+      font-family: fonts.$normal-text;
+      color: colors.$star-white;
+      padding: 16px;
+      width: 100%;
+      border-radius: 12px;
+      text-align: center;
+    }
+  }
+  &__bento:nth-child(1) {
+    border: 1px solid colors.$med-grey;
+    flex-direction: column;
+    padding: 16px;
+    gap: 1rem;
+    text-align: center;
+    & > h2 {
+      font-family: fonts.$title-text;
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+    }
+    & p {
+      font-family: fonts.$normal-text;
+      font-size: 2rem;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  &__text > p {
+    transition: color 0.8s ease 0s, background-color 0.8s ease 0s;
+    padding: 8px;
+    border-radius: 8px;
+  }
+  &__text > p:nth-child(1):hover {
+    background-color: colors.$deep-blue;
+    color: colors.$star-white;
+  }
+  &__text > p:nth-child(2):hover {
+    background-color: colors.$deep-purple;
+    color: colors.$star-white;
+  }
+  &__text > p:nth-child(3):hover {
+    background-color: colors.$bright-magenta;
+    color: colors.$star-white;
+  }
+  &__bento:nth-child(2), &__bento:nth-child(8) {
+    display: none;
+  }
+  &__bento:nth-child(3) {
+    background-color: colors.$neon-blue;
+    & > a {
+      font-size: 1.5rem;
+    }
+  }
+  &__bento:nth-child(4), &__bento:nth-child(5), &__bento:nth-child(6), &__bento:nth-child(7) {
+    background-color: colors.$space-blue;
+    & > a {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .socials-home {
+    &__content {
+      grid-template-columns: repeat(2, 1fr); 
+      grid-template-rows: repeat(2, 1fr); 
+    }
+    &__bento:nth-child(1) {
+      grid-column: span 2; 
+      grid-row: span 2;
+      & > h2 {
+        font-size: clamp(3.5rem, 5vw, 4rem);
+      }
+    }
+    &__text {
+      flex-direction: row;
+    }
+    &__bento:nth-child(3) {
+      grid-column: span 2; 
+      grid-row: span 1;
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .socials-home {
+    &__contain {
+      padding: 72px 24px;
+    }
+    &__content {
+      grid-template-columns: repeat(6, 1fr); 
+      grid-template-rows: repeat(4, 1fr); 
+      place-self: center;
+      max-width: 1000px;
+    }
+    &__bento:nth-child(1) {
+      grid-column: span 3; 
+      grid-row: span 4;
+      height: 100%;
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+      & > h2 {
+        font-size: clamp(4rem, 5vw, 6rem);
+      }
+      & p {
+        font-size: 3rem;
+      }
+    }
+    &__bento:nth-child(2), &__bento:nth-child(8) {
+      display: flex;
+      grid-column: span 3; 
+      grid-row: span 1;
+      background-color: colors.$star-white;
+      border: 1px solid colors.$med-grey;
+    }
+    &__bento:nth-child(3) {
+      grid-column: span 2; 
+      grid-row: span 1;
+    }
+    &__bento:nth-child(4), &__bento:nth-child(5), &__bento:nth-child(6), &__bento:nth-child(7) {
+      grid-column: span 1; 
+      grid-row: span 1;
+    }
+  }
+}
