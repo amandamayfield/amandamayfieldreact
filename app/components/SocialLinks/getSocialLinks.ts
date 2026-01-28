@@ -1,9 +1,12 @@
-type NavLink = {
+import { FaGithub } from "react-icons/fa";
+
+type SocialLink = {
   name: string;
   link: string;
+  logo?: any;
 };
 
-export const socialLinks: readonly NavLink[] = [
+export const socialLinks: readonly SocialLink[] = [
   { name: "Github", link: "https://github.com/amandamayfield" },
   {
     name: "LinkedIn",

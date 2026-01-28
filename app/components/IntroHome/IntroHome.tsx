@@ -31,11 +31,11 @@ export default function IntroHome() {
         </motion.div>
         <motion.div
           className="intro-home__bento"
-          whileTap={{ scale: 0.9 }}
           whileHover={{
             scale: 0.97,
             transition: { duration: 0.3 },
           }}
+          whileTap={{ scale: 0.9, opacity: 0.9 }}
         >
           <Link
             to="/about"

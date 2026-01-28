@@ -1,7 +1,7 @@
 import "./socialsHome.scss";
 import { Link } from "react-router";
 import { motion } from "motion/react";
-import { socialLinks } from "~/utils/getSocialLinks";
+import SocialLinksLogo from "../SocialLinks/SocialLinksLogo";
 
 const words = [
   { word: "Build" },
@@ -64,25 +64,7 @@ export default function SocialsHome() {
             <span>Contact me</span>
           </Link>
         </motion.div>
-        {socialLinks.map((link) => (
-          <motion.div
-            key={link.name}
-            className="socials-home__bento"
-            whileHover={{
-              scale: 0.97,
-              transition: { duration: 0.3 },
-            }}
-            whileTap={{ scale: 0.9, opacity: 0.9 }}
-          >
-            <Link
-              to={link.link}
-              aria-label={`Click to visit my ${link.name} profile`}
-              target="_blank"
-            >
-              <span>{link.name}</span>
-            </Link>
-          </motion.div>
-        ))}
+        <SocialLinksLogo passedClass="socials-home__bento" />
         <motion.div className="socials-home__bento polka-dot"></motion.div>
       </div>
     </section>

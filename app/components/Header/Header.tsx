@@ -2,19 +2,8 @@ import "./header.scss";
 import { Link } from "react-router";
 import { useState } from "react";
 import NavButton from "../navButton/navButton";
+import { generalLinks } from "../GeneralLinks/getGeneralLinks";
 import Logo from "../Logo/Logo";
-
-type NavLink = {
-  name: string;
-  link: string;
-};
-
-const navLinks: readonly NavLink[] = [
-  { name: "About", link: "/about" },
-  // { name: "Blog", link: "/blog" },
-  // { name: "Projects", link: "/projects" },
-  { name: "Contact", link: "/contact" },
-] as const;
 
 export default function Header() {
   return (
@@ -45,7 +34,7 @@ function MobileNav() {
       <NavButton isOpen={isOpen} onClick={toggleMenu} />
       <nav className={`header-nav ${isOpen ? "isOpen" : ""}`}>
         <ul className="header-links">
-          {navLinks.map((link) => (
+          {generalLinks.map((link) => (
             <li key={link.name}>
               <Link
                 to={link.link}
@@ -67,8 +56,8 @@ function DesktopNav() {
   // const leftLinks = navLinks.slice(0, 2); // About, Blog
   // const rightLinks = navLinks.slice(2); // Projects, Contact
 
-  const leftLinks = navLinks.slice(0, 1); // About
-  const rightLinks = navLinks.slice(1); // Contact
+  const leftLinks = generalLinks.slice(0, 1); // About
+  const rightLinks = generalLinks.slice(1); // Contact
 
   return (
     <nav className="header-nav">
