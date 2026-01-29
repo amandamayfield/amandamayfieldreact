@@ -1,0 +1,8 @@
+@use '../../style/colors';
+@use '../../style/fonts';
+
+.about-title {
+  &__contain {
+    padding: 48px 24px;
+  }
+}

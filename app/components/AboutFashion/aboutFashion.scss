@@ -1,0 +1,8 @@
+@use '../../style/colors';
+@use '../../style/fonts';
+
+.about-fashion {
+  &__contain {
+    padding: 24px;
+  }
+}

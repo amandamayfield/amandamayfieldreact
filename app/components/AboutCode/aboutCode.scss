@@ -1,0 +1,8 @@
+@use '../../style/colors';
+@use '../../style/fonts';
+
+.about-code {
+  &__contain {
+    padding: 24px;
+  }
+}

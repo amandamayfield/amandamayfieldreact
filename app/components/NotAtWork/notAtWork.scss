@@ -1,0 +1,8 @@
+@use '../../style/colors';
+@use '../../style/fonts';
+
+.naw {
+  &__contain {
+    padding: 24px;
+  }
+}
