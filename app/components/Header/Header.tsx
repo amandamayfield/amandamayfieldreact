@@ -1,6 +1,6 @@
 import "./header.scss";
 import { Link } from "react-router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import NavButton from "../navButton/navButton";
 import { generalLinks } from "../GeneralLinks/getGeneralLinks";
 import Logo from "../Logo/Logo";
@@ -16,6 +16,19 @@ export default function Header() {
 
 function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      const originalStyle = window.getComputedStyle(
+        document.body
+      ).overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = originalStyle;
+      };
+    }
+  }, [isOpen]);
+
   const toggleMenu = () => setIsOpen(!isOpen);
 
   function closeNav() {
@@ -23,32 +36,35 @@ function MobileNav() {
   }
 
   return (
-    <div className="mobile-nav">
-      <Link
-        to="/"
-        aria-label="Click to visit the Home page"
-        onClick={closeNav}
-      >
-        <Logo />
-      </Link>
-      <NavButton isOpen={isOpen} onClick={toggleMenu} />
-      <nav className={`header-nav ${isOpen ? "isOpen" : ""}`}>
-        <ul className="header-links">
-          {generalLinks.map((link) => (
-            <li key={link.name}>
-              <Link
-                to={link.link}
-                className="header-link"
-                aria-label="Click to visit the {link.name} page"
-                onClick={toggleMenu}
-              >
-                {link.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </div>
+    <>
+      <div className="backdrop" id="backdrop"></div>
+      <div className="mobile-nav">
+        <Link
+          to="/"
+          aria-label="Click to visit the Home page"
+          onClick={closeNav}
+        >
+          <Logo />
+        </Link>
+        <NavButton isOpen={isOpen} onClick={toggleMenu} />
+        <nav className={`header-nav ${isOpen ? "isOpen" : ""}`}>
+          <ul className="header-links">
+            {generalLinks.map((link) => (
+              <li key={link.name}>
+                <Link
+                  to={link.link}
+                  className="header-link"
+                  aria-label="Click to visit the {link.name} page"
+                  onClick={toggleMenu}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </>
   );
 }
 
