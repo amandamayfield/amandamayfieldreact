@@ -63,7 +63,7 @@ function MobileNav() {
                   aria-label="Click to visit the {link.name} page"
                   onClick={toggleMenu}
                 >
-                  {link.name}
+                  <span>{link.name}</span>
                 </Link>
               </li>
             ))}
