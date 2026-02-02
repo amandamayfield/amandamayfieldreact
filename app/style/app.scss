@@ -42,6 +42,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .app-contain {
+  margin: 0 auto;
   max-width: 1400px;
   border-left: 1px solid colors.$med-grey;
   border-right: 1px solid colors.$med-grey;

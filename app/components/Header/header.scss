@@ -103,6 +103,8 @@
   }
 
   .header {
+    margin: 0 auto;
+    max-width: 1400px;
     &-nav {
       position: static;
       background-color: transparent;
