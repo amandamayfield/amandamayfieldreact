@@ -4,6 +4,7 @@ import AboutTitle from "~/components/AboutTitle/AboutTitle";
 import AboutFashion from "~/components/AboutFashion/AboutFashion";
 import AboutCode from "~/components/AboutCode/AboutCode";
 import NotAtWork from "~/components/NotAtWork/NotAtWork";
+import CraftCode from "~/components/CraftCode/CraftCode";
 
 export function meta({}: Route.MetaArgs) {
   return [{ title: "Amanda Mayfield - Software Engineer" }];
@@ -15,6 +16,8 @@ export default function About() {
       <AboutTitle />
       <BentoDivider />
       <AboutFashion />
+      <BentoDivider />
+      <CraftCode />
       <BentoDivider />
       <AboutCode />
       <BentoDivider />
