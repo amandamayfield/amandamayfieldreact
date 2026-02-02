@@ -18,15 +18,21 @@ function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
+    const backdrop = document.getElementById("backdrop");
+    const originalOverflow = window.getComputedStyle(
+      document.body,
+    ).overflow;
     if (isOpen) {
-      const originalStyle = window.getComputedStyle(
-        document.body
-      ).overflow;
       document.body.style.overflow = "hidden";
-      return () => {
-        document.body.style.overflow = originalStyle;
-      };
+      backdrop?.classList.add("active");
+    } else {
+      document.body.style.overflow = originalOverflow;
+      backdrop?.classList.remove("active");
     }
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      backdrop?.classList.remove("active");
+    };
   }, [isOpen]);
 
   const toggleMenu = () => setIsOpen(!isOpen);
