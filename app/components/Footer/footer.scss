@@ -9,6 +9,8 @@
   color: colors.$star-white;
   font-family: fonts.$normal-text;
   gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
   &-section {
     display: flex;
     border-bottom: 1px colors.$dark-grey solid;
