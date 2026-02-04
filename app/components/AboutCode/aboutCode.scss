@@ -28,6 +28,15 @@
     align-items: center;
     border: 1px solid colors.$med-grey;
   }
+  &__bento:nth-child(1) {
+    height: 300px;
+    width: 100%;
+    background-image: url('../../assets/amanda-talk.jpeg');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
   &__bento:nth-child(2) {
     display: flex;
     flex-direction: column;
@@ -37,9 +46,6 @@
     font-size: 1.2rem;
     text-align: center;
   }
-  &__bento:nth-child(1), &__bento:nth-child(3) {
-    height: 48px;
-  }
 }
 
 @media screen and (min-width: 720px) {
@@ -47,21 +53,26 @@
     &__contain {
       padding: 72px 24px;
     }
-    &__content {
-      grid-template-columns: repeat(7, 1fr); 
-      grid-template-rows: repeat(1, 1fr); 
-    }
     &__title {
       padding: 0 0 2rem 0;
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .about-code {
+    &__content {
+      grid-template-columns: repeat(12, 1fr); 
+      grid-template-rows: repeat(1, 1fr); 
+    }
+    &__bento:nth-child(1) {
+      grid-column: span 7; 
+      grid-row: span 1;
+      height: 100%;
     }
     &__bento:nth-child(2) {
       grid-column: span 5; 
       grid-row: span 1;
-    }
-    &__bento:nth-child(1), &__bento:nth-child(3) {
-      grid-column: span 1; 
-      grid-row: span 1;
-      height: 100%;
     }
   }
 }

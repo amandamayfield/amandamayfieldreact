@@ -5,7 +5,7 @@ export default function AboutCode() {
     <section className="about-code__contain">
       <h3 className="about-code__title">The Pivot to Technology</h3>
       <div className="about-code__content">
-        <div className="about-code__bento polka-dot"></div>
+        <div className="about-code__bento"></div>
         <div className="about-code__bento">
           <p>
             While working on creating a website for my own fashion
@@ -27,7 +27,6 @@ export default function AboutCode() {
             conference next.
           </p>
         </div>
-        <div className="about-code__bento polka-dot"></div>
       </div>
     </section>
   );
