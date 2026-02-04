@@ -16,7 +16,7 @@
     width: 100%; 
     grid-template-columns: repeat(1, 1fr); 
     grid-template-rows: repeat(1, 1fr); 
-    gap: 24px; 
+    gap: 1.5rem; 
   }
   &__bento {
     border: 1px solid colors.$med-grey;
