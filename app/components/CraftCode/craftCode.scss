@@ -30,12 +30,7 @@
     font-family: fonts.$normal-text;
   }
   &__bento:nth-child(1) {
-    width: 100%;
     background-image: url('../../assets/patternmaking.jpg');
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
-    overflow: hidden;
   }
   &__bento:nth-child(2) {
     display: flex;
@@ -46,16 +41,16 @@
     font-size: 1.2rem;
     text-align: center;
   }
-  &__bento:nth-child(3) {
-    width: 100%;
+  &__bento:nth-child(3) {   
     background-image: url('../../assets/wireframe.jpg');
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
-    overflow: hidden;
   }
   &__bento:nth-child(1), &__bento:nth-child(3) {
     height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
   }
 }
 
