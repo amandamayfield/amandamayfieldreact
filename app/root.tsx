@@ -54,7 +54,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className="app-contain">
         <Outlet />
       </div>
