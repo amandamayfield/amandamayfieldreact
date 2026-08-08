@@ -9,7 +9,6 @@
   color: colors.$star-white;
   font-family: fonts.$normal-text;
   gap: 2rem;
-  max-width: 1400px;
   margin: 0 auto;
   &-section {
     display: flex;
@@ -58,6 +57,14 @@
     &:hover:after { 
       width: 100%; 
       left: 0; 
+    }
+    &:focus {
+      outline: none;
+    }
+    &:focus-visible {
+      outline: 2px solid colors.$bright-coral;
+      outline-offset: 4px;
+      padding-bottom: 0;
     }
   }
 }

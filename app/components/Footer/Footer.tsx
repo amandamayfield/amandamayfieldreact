@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-section">
         <p>
-          I'm Amanda Mayfield: Senior Frontend Developer, blogger, and
+          I'm Amanda Mayfield: Senior Software Engineeer, blogger, and
           speaker. I'd love to connect with you!
         </p>
         <p>&#169; 2026 Amanda Mayfield</p>
