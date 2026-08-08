@@ -20,13 +20,13 @@
     transition: color 0.5s ease 0s;
   }
   &__text:hover:nth-child(1) {
-    color: colors.$deep-blue;
+    color: colors.$deep-bluegrey;
   }
   &__text:hover:nth-child(2) {
-    color: colors.$deep-purple;
+    color: colors.$bright-violet;
   }
   &__text:hover:nth-child(3) {
-    color: colors.$bright-magenta;
+    color: colors.$bright-coral;
   }
 }
 
@@ -42,7 +42,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 3rem;
-      padding: 48px 0;
+      padding: 96px 0;
     }
   }
 }

@@ -46,15 +46,15 @@
     border-radius: 8px;
   }
   &__text > p:nth-child(1):hover {
-    background-color: colors.$deep-blue;
+    background-color: colors.$deep-bluegrey;
     color: colors.$star-white;
   }
   &__text > p:nth-child(2):hover {
-    background-color: colors.$deep-purple;
+    background-color: colors.$bright-violet;
     color: colors.$star-white;
   }
   &__text > p:nth-child(3):hover {
-    background-color: colors.$bright-magenta;
+    background-color: colors.$bright-coral;
     color: colors.$star-white;
   }
   &__bento:nth-child(2), &__bento:nth-child(8) {
@@ -74,7 +74,7 @@
     & > a {
       font-size: 1.2rem;
       &:hover > div:after {
-       background: colors.$bright-magenta;
+       background: colors.$bright-coral;
       }
     }
   }
