@@ -1,12 +1,12 @@
 import "./introHome.scss";
 import { Link } from "react-router";
-import { motion } from "motion/react";
+// import { motion } from "motion/react";
 
 export default function IntroHome() {
   return (
     <section className="intro-home__contain">
       <div className="intro-home__content">
-        <motion.div
+        {/* <motion.div
           className="intro-home__bento"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{
@@ -45,7 +45,7 @@ export default function IntroHome() {
           </Link>
         </motion.div>
         <motion.div className="intro-home__bento"></motion.div>
-        <motion.div className="intro-home__bento polka-dot"></motion.div>
+        <motion.div className="intro-home__bento polka-dot"></motion.div> */}
       </div>
     </section>
   );

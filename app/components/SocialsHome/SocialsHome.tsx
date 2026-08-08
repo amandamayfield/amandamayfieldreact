@@ -1,6 +1,5 @@
 import "./socialsHome.scss";
 import { Link } from "react-router";
-import { motion } from "motion/react";
 import SocialLinksLogo from "../SocialLinks/SocialLinksLogo";
 
 const words = [
@@ -13,7 +12,7 @@ export default function SocialsHome() {
   return (
     <section className="socials-home__contain">
       <div className="socials-home__content">
-        <motion.div className="socials-home__bento">
+        {/* <motion.div className="socials-home__bento">
           <h2>Connect</h2>
           <div className="socials-home__text">
             {words.map((w, index) => (
@@ -65,7 +64,7 @@ export default function SocialsHome() {
           </Link>
         </motion.div>
         <SocialLinksLogo passedClass="socials-home__bento" />
-        <motion.div className="socials-home__bento polka-dot"></motion.div>
+        <motion.div className="socials-home__bento polka-dot"></motion.div> */}
       </div>
     </section>
   );

@@ -1,6 +1,5 @@
 import "./aboutTitle.scss";
 import { getTimeOfDayGreeting } from "~/utils/timeOfDayGreeting";
-import { motion, spring } from "motion/react";
 
 const words = [
   { word: "From" },
@@ -19,29 +18,30 @@ export default function AboutTitle() {
         <h2>I'm Amanda Mayfield</h2>
         <p className="about-title__phrase">
           {words.map((w, index) => (
-            <motion.span
-              key={w.word}
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: {
-                  delay: 0.3 * index,
-                  duration: 2,
-                  type: spring,
-                  bounce: 0.3,
-                },
-              }}
-              viewport={{
-                once: true,
-                amount: 0.5,
-              }}
-            >
-              {w.word}
-            </motion.span>
+            // <motion.span
+            //   key={w.word}
+            //   initial={{ opacity: 0, y: 100 }}
+            //   whileInView={{
+            //     opacity: 1,
+            //     y: 0,
+            //     transition: {
+            //       delay: 0.3 * index,
+            //       duration: 2,
+            //       type: spring,
+            //       bounce: 0.3,
+            //     },
+            //   }}
+            //   viewport={{
+            //     once: true,
+            //     amount: 0.5,
+            //   }}
+            // >
+            //   {w.word}
+            // </motion.span>
+            <span>{w.word}</span>
           ))}
         </p>
-        <motion.p
+        {/* <motion.p
           initial={{ opacity: 0, x: -100 }}
           whileInView={{
             opacity: 1,
@@ -51,9 +51,9 @@ export default function AboutTitle() {
           viewport={{ once: true, amount: 0.5 }}
         >
           Engineering with Intent
-        </motion.p>
+        </motion.p> */}
       </div>
-      <motion.div className="about-title__image"></motion.div>
+      {/* <motion.div className="about-title__image"></motion.div> */}
     </section>
   );
 }
