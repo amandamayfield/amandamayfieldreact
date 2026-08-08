@@ -43,10 +43,6 @@ $shadows-big: multiple-box-shadow(100, colors.$star-white);
   background: radial-gradient(ellipse at bottom, colors.$space-blue 0%, colors.$space-black 100%);
   overflow: hidden;
   position: relative;
-  border-radius: 12px;
-  &-contain {
-    padding: 24px;
-  }
   &__stars {
     width: 2px;
     height: 2px;
