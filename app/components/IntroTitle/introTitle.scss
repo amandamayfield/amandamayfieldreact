@@ -1,8 +1,26 @@
-@use '../../style/colors';
-@use '../../style/fonts';
+@use "../../style/colors";
+@use "../../style/fonts";
 
 .intro-title__desktop {
   display: none;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.03, 0.97) translateY(0);
+  }
+  30% {
+    transform: scale(0.97, 1.03) translateY(-12px);
+  }
+  50% {
+    transform: scale(1.03, 0.97) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
 }
 
 .intro-title {
@@ -20,29 +38,38 @@
     transition: color 0.5s ease 0s;
   }
   &__text:hover:nth-child(1) {
-    color: colors.$deep-bluegrey;
+    color: colors.$neon-blue;
+    animation: bounce 1s ease infinite;
   }
   &__text:hover:nth-child(2) {
-    color: colors.$bright-violet;
+    color: colors.$deep-bluegrey;
+    animation: bounce 1s ease infinite;
   }
   &__text:hover:nth-child(3) {
-    color: colors.$bright-coral;
+    color: colors.$bright-violet;
+    animation: bounce 1s ease infinite;
   }
 }
 
 @media screen and (min-width: 720px) {
   .intro-title__mobile {
     display: none;
-  } 
+  }
 
   .intro-title {
     &__desktop {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 3rem;
+      padding: 96px 0;
+    }
+    &__title {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
       gap: 3rem;
-      padding: 96px 0;
     }
   }
 }
