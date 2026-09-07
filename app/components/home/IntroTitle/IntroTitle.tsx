@@ -6,6 +6,14 @@ const words = [
   { word: "Mentor" },
 ];
 
+const IntroText = () => {
+  return words.map((w) => (
+    <h2 key={w.word} className="intro-text">
+      {w.word}
+    </h2>
+  ));
+};
+
 export default function IntroTitle() {
   return (
     <>
@@ -19,11 +27,7 @@ function IntroTitleDesktop() {
   return (
     <div className="intro-title__desktop">
       <div className="intro-title__title">
-        {words.map((w) => (
-          <h2 key={w.word} className="intro-title__text">
-            {w.word}
-          </h2>
-        ))}
+        <IntroText />
       </div>
     </div>
   );
@@ -32,11 +36,7 @@ function IntroTitleDesktop() {
 function IntroTitleMobile() {
   return (
     <div className="intro-title__mobile">
-      {words.map((w) => (
-        <h2 key={w.word} className="intro-title__text">
-          {w.word}
-        </h2>
-      ))}
+      <IntroText />
     </div>
   );
 }

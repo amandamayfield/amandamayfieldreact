@@ -1,11 +1,11 @@
-@use "../../style/colors";
-@use "../../style/fonts";
+@use "../../../style/colors";
+@use "../../../style/fonts";
 @use "sass:math";
 @use "sass:string";
 
-@function multiple-box-shadow($n, $hex) {
+@function multiple-box-shadow($num, $hex) {
   $value: "#{math.random(2000)}px #{math.random(2000)}px #{$hex}";
-  @for $i from 2 through $n {
+  @for $i from 2 through $num {
     $value: "#{$value} , #{math.random(2000)}px #{math.random(2000)}px #{$hex}";
   }
   @return string.unquote($value);

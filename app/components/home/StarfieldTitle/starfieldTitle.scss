@@ -1,5 +1,5 @@
-@use '../../style/colors';
-@use '../../style/fonts';
+@use "../../../style/colors";
+@use "../../../style/fonts";
 
 .starfield {
   &__title {
@@ -15,7 +15,10 @@
       font-weight: 600;
       font-style: normal;
       font-size: clamp(2.5rem, 5vw, 3.5rem);
-      background: linear-gradient(colors.$neon-blue, colors.$star-white);
+      background: linear-gradient(
+        colors.$neon-blue,
+        colors.$star-white
+      );
       background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 36px;

@@ -1,5 +1,5 @@
-@use '../../style/colors';
-@use '../../style/fonts';
+@use "../../../style/colors";
+@use "../../../style/fonts";
 
 .socials-home__bento > a {
   font-family: fonts.$normal-text;
@@ -18,14 +18,16 @@
     position: relative;
     display: flex;
     padding: 5px 0;
-    &:after {    
+    &:after {
       bottom: 0;
       content: "";
       display: block;
       height: 2px;
       left: 50%;
       position: absolute;
-      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      transition:
+        width 0.3s ease 0s,
+        left 0.3s ease 0s;
       width: 0;
     }
     & > span:nth-child(1) {
@@ -33,7 +35,7 @@
     }
   }
   &:hover > div:after {
-    width: 100%; 
-    left: 0; 
+    width: 100%;
+    left: 0;
   }
 }

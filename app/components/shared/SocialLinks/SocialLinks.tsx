@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { socialLinks } from "~/components/SocialLinks/getSocialLinks";
+import { socialLinks } from "~/components/shared/SocialLinks/getSocialLinks";
 
 interface LinkProps {
   passedClass: string;

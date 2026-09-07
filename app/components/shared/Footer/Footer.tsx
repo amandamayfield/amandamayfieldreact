@@ -1,4 +1,4 @@
-import GeneralLinks from "../GeneralLinks/GeneralLinks";
+// import GeneralLinks from "../GeneralLinks/GeneralLinks";
 import SocialLinks from "../SocialLinks/SocialLinks";
 import "./footer.scss";
 
@@ -13,9 +13,9 @@ export default function Footer() {
         <p>&#169; 2026 Amanda Mayfield</p>
       </div>
       <nav className="footer-links">
-        <ul>
+        {/* <ul>
           <GeneralLinks passedClass="footer-link" />
-        </ul>
+        </ul> */}
         <ul>
           <SocialLinks passedClass="footer-link" />
         </ul>

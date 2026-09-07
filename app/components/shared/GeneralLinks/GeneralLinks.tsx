@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { generalLinks } from "~/components/GeneralLinks/getGeneralLinks";
+import { generalLinks } from "~/components/shared/GeneralLinks/getGeneralLinks";
 
 interface LinkProps {
   passedClass: string;

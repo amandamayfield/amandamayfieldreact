@@ -1,5 +1,5 @@
-@use '../../style/colors';
-@use '../../style/fonts';
+@use "../../../style/colors";
+@use "../../../style/fonts";
 
 .mobile-nav {
   display: flex;
@@ -15,7 +15,9 @@
   opacity: 0;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  transition: opacity 300ms ease, height 300ms ease;
+  transition:
+    opacity 300ms ease,
+    height 300ms ease;
   z-index: 1;
   pointer-events: none;
 }
@@ -33,12 +35,12 @@
   display: flex;
   &-nav {
     position: fixed;
-    top: 68px;         
-    right: 0;         
-    height: 100%;      
+    top: 68px;
+    right: 0;
+    height: 100%;
     width: 100%;
-    margin: 0 auto;        
-    background-color: colors.$star-white; 
+    margin: 0 auto;
+    background-color: colors.$star-white;
     transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(100%);
     z-index: 2;
@@ -71,7 +73,7 @@
     & > span {
       position: relative;
       padding: 0 0 5px 0;
-      &::after {    
+      &::after {
         bottom: 0;
         content: "";
         display: block;
@@ -79,16 +81,18 @@
         left: 50%;
         position: absolute;
         background: colors.$neon-blue;
-        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        transition:
+          width 0.3s ease 0s,
+          left 0.3s ease 0s;
         width: 0;
       }
     }
     &:hover {
       background-color: colors.$pale-grey;
     }
-    &:hover > span::after { 
-      width: 100%; 
-      left: 0; 
+    &:hover > span::after {
+      width: 100%;
+      left: 0;
     }
   }
 }
@@ -126,7 +130,7 @@
       position: relative;
       color: colors.$star-white;
       padding: 0 0 5px 0;
-      &::after {    
+      &::after {
         bottom: 0;
         content: "";
         display: block;
@@ -134,17 +138,18 @@
         left: 50%;
         position: absolute;
         background: colors.$star-white;
-        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        transition:
+          width 0.3s ease 0s,
+          left 0.3s ease 0s;
         width: 0;
       }
       &:hover {
         background-color: transparent;
       }
-      &:hover::after { 
-        width: 100%; 
-        left: 0; 
+      &:hover::after {
+        width: 100%;
+        left: 0;
       }
     }
   }
 }
-

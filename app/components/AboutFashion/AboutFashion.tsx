@@ -3,8 +3,9 @@ import "./aboutFashion.scss";
 export default function AboutFashion() {
   return (
     <section className="about-fashion__contain">
-      <h3 className="about-fashion__title">My history in Fashion</h3>
+      {/* <h3 className="about-fashion__title">My history in Fashion</h3> */}
       <div className="about-fashion__content">
+        <div className="about-fashion__bento"></div>
         <div className="about-fashion__bento">
           <p>
             I originally got a BFA in Fashion Design from The School
@@ -23,7 +24,6 @@ export default function AboutFashion() {
             at the renowned couture house of Carolina Hererra.
           </p>
         </div>
-        <div className="about-fashion__bento"></div>
         <div className="about-fashion__bento"></div>
         <div className="about-fashion__bento"></div>
       </div>

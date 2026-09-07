@@ -1,4 +1,4 @@
-@use '../../style/colors';
+@use "../../../style/colors";
 
 .nav-btn {
   display: flex;
@@ -13,24 +13,26 @@
   background: none;
   padding: 0;
   border: none;
-  & > span, > span::before, > span::after {
+  & > span,
+  > span::before,
+  > span::after {
     display: block;
     position: absolute;
     right: 0;
     height: 2px;
     background-color: colors.$star-white;
-    transition-duration: .25s;
+    transition-duration: 0.25s;
   }
   & > span {
     width: 30px;
   }
   & > span::before {
-    content: '';
+    content: "";
     top: -12px;
     width: 24px;
   }
   & > span::after {
-    content: '';
+    content: "";
     top: 12px;
     width: 36px;
   }

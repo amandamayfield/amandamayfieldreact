@@ -4,8 +4,8 @@ type NavLink = {
 };
 
 export const generalLinks: readonly NavLink[] = [
-  { name: "About", link: "/about" },
+  // { name: "About", link: "/about" },
   // { name: "Blog", link: "/blog" },
   // { name: "Projects", link: "/projects" },
-  { name: "Contact", link: "/contact" },
+  // { name: "Contact", link: "/contact" },
 ] as const;

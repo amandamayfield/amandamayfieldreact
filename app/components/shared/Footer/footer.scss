@@ -1,5 +1,5 @@
-@use '../../style/colors';
-@use '../../style/fonts';
+@use "../../../style/colors.scss";
+@use "../../../style/fonts";
 
 .footer {
   display: flex;
@@ -43,7 +43,7 @@
     color: colors.$star-white;
     position: relative;
     padding-bottom: 5px;
-    &:after {    
+    &:after {
       bottom: 0;
       content: "";
       display: block;
@@ -51,12 +51,14 @@
       left: 50%;
       position: absolute;
       background: colors.$bright-coral;
-      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      transition:
+        width 0.3s ease 0s,
+        left 0.3s ease 0s;
       width: 0;
     }
-    &:hover:after { 
-      width: 100%; 
-      left: 0; 
+    &:hover:after {
+      width: 100%;
+      left: 0;
     }
     &:focus {
       outline: none;
