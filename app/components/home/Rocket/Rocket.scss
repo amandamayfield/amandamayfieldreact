@@ -1,0 +1,95 @@
+@use "../../../style/colors";
+
+.rocket {
+  position: relative;
+  width: 40px;
+  height: 50px;
+  transform: rotate(90deg);
+  &-body {
+    position: absolute;
+    background-color: colors.$dark-grey;
+    top: 0;
+    left: 8px;
+    right: 8px;
+    height: 50px;
+    border-radius: 50% 50% 30% 30% / 60% 60% 20% 20%;
+  }
+  &-window {
+    position: absolute;
+    top: 20px;
+    left: 11px;
+    width: 18px;
+    height: 18px;
+    background: colors.$deep-bluegrey;
+    border-radius: 50%;
+    border: 3px solid colors.$med-grey;
+  }
+  &-fin__left {
+    position: absolute;
+    top: 20px;
+    left: -3px;
+    width: 0;
+    height: 0;
+    border-top: 24px solid transparent;
+    border-right: 12px solid colors.$bright-violet;
+    transform: skewY(-25deg) rotate(3deg);
+  }
+  &-fin__right {
+    position: absolute;
+    top: 20px;
+    right: -3px;
+    width: 0;
+    height: 0;
+    border-top: 24px solid transparent;
+    border-left: 12px solid colors.$bright-violet;
+    transform: skewY(25deg) rotate(-3deg);
+  }
+  &-tail {
+    position: absolute;
+    top: 48px;
+    left: 11px;
+    width: 18px;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid colors.$bright-violet;
+  }
+  &-graphic {
+    position: absolute;
+    top: -21px;
+    right: 0;
+  }
+  &-scroll {
+    display: flex;
+    padding: 0;
+    &__contain {
+      position: relative;
+      width: 100%;
+    }
+    &__bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 8px;
+      background: linear-gradient(
+        to right,
+        colors.$neon-blue,
+        colors.$bright-violet,
+        colors.$bright-coral
+      );
+      animation: grow-progress linear;
+      animation-timeline: view();
+      animation-range: contain 0% contain 75%;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes grow-progress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}

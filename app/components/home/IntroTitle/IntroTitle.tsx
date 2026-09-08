@@ -1,4 +1,5 @@
 import "./introTitle.scss";
+import Rocket from "../Rocket/Rocket";
 
 const words = [
   { word: "Engineer" },
@@ -29,6 +30,7 @@ function IntroTitleDesktop() {
       <div className="intro-title__title">
         <IntroText />
       </div>
+      <Rocket />
     </div>
   );
 }
