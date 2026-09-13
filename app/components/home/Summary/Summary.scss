@@ -1,0 +1,17 @@
+@use "../../../style/colors";
+@use "../../../style/fonts";
+
+.summary {
+  &__contain {
+    font-size: 2rem;
+    font-family: fonts.$normal-text;
+    padding-top: 96px;
+    & span {
+      font-family: fonts.$title-text;
+      font-size: 2.5rem;
+    }
+    & p {
+      max-width: 600px;
+    }
+  }
+}
