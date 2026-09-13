@@ -77,7 +77,7 @@
         colors.$bright-violet,
         colors.$bright-coral
       );
-      animation: grow-progress linear;
+      animation: grow-progress ease-in;
       animation-timeline: view();
       animation-range: contain 0% contain 75%;
       animation-fill-mode: forwards;
