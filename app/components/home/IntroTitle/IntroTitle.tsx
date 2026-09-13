@@ -17,28 +17,11 @@ const IntroText = () => {
 
 export default function IntroTitle() {
   return (
-    <>
-      <IntroTitleDesktop />
-      <IntroTitleMobile />
-    </>
-  );
-}
-
-function IntroTitleDesktop() {
-  return (
-    <div className="intro-title__desktop">
-      <div className="intro-title__title">
+    <div className="intro-title__contain">
+      <div>
         <IntroText />
       </div>
       <Rocket />
-    </div>
-  );
-}
-
-function IntroTitleMobile() {
-  return (
-    <div className="intro-title__mobile">
-      <IntroText />
     </div>
   );
 }

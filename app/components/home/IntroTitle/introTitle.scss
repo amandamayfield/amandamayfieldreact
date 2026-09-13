@@ -21,10 +21,11 @@
 
 .intro {
   &-text {
-    font-size: clamp(2rem, 6vw, 4rem);
+    font-size: clamp(2rem, 10vw, 7rem);
     font-family: fonts.$title-text;
     text-align: center;
     transition: color 0.5s ease 0s;
+    font-weight: 775;
   }
   &-text:hover:nth-child(1) {
     color: colors.$neon-blue;
@@ -40,36 +41,19 @@
   }
 }
 
-.intro-title__desktop {
-  display: none;
-}
-
 .intro-title {
-  &__mobile {
+  &__contain {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    justify-content: center;
+    row-gap: 48px;
   }
 }
 
-@media screen and (min-width: 720px) {
-  .intro-title__mobile {
-    display: none;
-  }
-
+@media screen and (min-width: 600px) {
   .intro-title {
-    &__desktop {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    &__contain {
       row-gap: 96px;
-    }
-    &__title {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 3rem;
     }
   }
 }

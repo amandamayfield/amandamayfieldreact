@@ -61,7 +61,7 @@
   }
   &-scroll {
     display: flex;
-    padding: 0;
+    padding: 0 24px;
     &__contain {
       position: relative;
       width: 100%;
@@ -91,5 +91,21 @@
   }
   100% {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .rocket {
+    &-scroll {
+      padding: 0 48px;
+    }
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .rocket {
+    &-scroll {
+      padding: 0 96px;
+    }
   }
 }

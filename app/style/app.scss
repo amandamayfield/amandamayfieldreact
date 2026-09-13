@@ -56,17 +56,21 @@ h6 {
 }
 
 .page-layout {
-  padding: 32px;
+  margin: 32px 48px;
 }
 
 @media screen and (min-width: 600px) {
+  .page-layout {
+    margin: 48px 60px;
+  }
+}
+
+@media screen and (min-width: 720px) {
   body {
     margin: 0 auto;
-    background-color: colors.$star-white;
-    padding: 0;
   }
 
   .page-layout {
-    padding: 96px;
+    margin: 96px 120px;
   }
 }

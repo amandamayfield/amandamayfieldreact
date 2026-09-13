@@ -39,7 +39,7 @@ $shadows-big: multiple-box-shadow(100, colors.$med-grey);
 }
 
 .starfield {
-  height: 50vh;
+  height: 55vh;
   background: radial-gradient(
     ellipse at bottom,
     colors.$space-blue 0%,
@@ -146,6 +146,6 @@ $shadows-big: multiple-box-shadow(100, colors.$med-grey);
 
 @media screen and (min-width: 600px) {
   .starfield {
-    height: 80vh;
+    height: 85vh;
   }
 }
