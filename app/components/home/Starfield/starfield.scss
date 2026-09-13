@@ -4,9 +4,9 @@
 @use "sass:string";
 
 @function multiple-box-shadow($num, $hex) {
-  $value: "#{math.random(2000)}px #{math.random(2000)}px #{$hex}";
+  $value: "#{math.random(2400)}px #{math.random(2400)}px #{$hex}";
   @for $i from 2 through $num {
-    $value: "#{$value} , #{math.random(2000)}px #{math.random(2000)}px #{$hex}";
+    $value: "#{$value} , #{math.random(2400)}px #{math.random(2400)}px #{$hex}";
   }
   @return string.unquote($value);
 }
@@ -20,7 +20,7 @@ $shadows-big: multiple-box-shadow(100, colors.$med-grey);
     transform: translateY(0px);
   }
   to {
-    transform: translateY(-2000px);
+    transform: translateY(-2400px);
   }
 }
 
