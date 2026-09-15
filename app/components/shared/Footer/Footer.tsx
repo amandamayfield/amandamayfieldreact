@@ -10,7 +10,9 @@ export default function Footer() {
           I'm Amanda Mayfield: Senior Software Engineer, blogger, and
           speaker. I'd love to connect with you!
         </p>
-        <p>&#169; 2026 Amanda Mayfield</p>
+        <p className="footer-copyright">
+          &#169; 2026 Amanda Mayfield
+        </p>
       </div>
       <nav className="footer-links">
         {/* <ul>

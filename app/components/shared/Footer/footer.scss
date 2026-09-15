@@ -38,6 +38,10 @@
       }
     }
   }
+  &-copyright {
+    font-family: fonts.$robot-text;
+    text-transform: uppercase;
+  }
   &-link {
     text-decoration: none;
     color: colors.$star-white;

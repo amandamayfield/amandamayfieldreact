@@ -28,53 +28,59 @@ h6 {
   max-width: 2400px;
 }
 
-.polka-dot {
-  margin: 0;
-  padding: 0;
-  background-color: colors.$star-white;
-  background-image: radial-gradient(
-    circle,
-    colors.$med-grey 2.5px,
-    transparent 2.5px
-  );
-  background-size: 20px 20px;
-  background-position:
-    0 0,
-    10px 10px;
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: radial-gradient(
-      circle,
-      colors.$med-grey 2.5px,
-      transparent 2.5px
-    );
-    background-size: 20px 20px;
-    background-position: 10px 10px;
-  }
+.page-layout {
+  margin: 48px;
 }
 
-.page-layout {
-  margin: 32px 48px;
-}
+// .left-circle {
+//   width: clamp(200px, 40%, 500px);
+//   height: clamp(200px, 40%, 500px);
+//   border-radius: 50%;
+//   border: 1px solid colors.$neon-blue;
+// }
 
 @media screen and (min-width: 600px) {
+  body {
+    margin: 0 auto;
+  }
   .page-layout {
     margin: 48px 60px;
   }
 }
 
-@media screen and (min-width: 720px) {
-  body {
-    margin: 0 auto;
-  }
-
+@media screen and (min-width: 960px) {
   .page-layout {
     margin: 96px 120px;
   }
 }
+
+// .polka-dot {
+//   margin: 0;
+//   padding: 0;
+//   background-color: colors.$star-white;
+//   background-image: radial-gradient(
+//     circle,
+//     colors.$med-grey 2.5px,
+//     transparent 2.5px
+//   );
+//   background-size: 20px 20px;
+//   background-position:
+//     0 0,
+//     10px 10px;
+//   position: relative;
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     background-image: radial-gradient(
+//       circle,
+//       colors.$med-grey 2.5px,
+//       transparent 2.5px
+//     );
+//     background-size: 20px 20px;
+//     background-position: 10px 10px;
+//   }
+// }
