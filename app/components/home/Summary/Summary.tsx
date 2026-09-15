@@ -14,16 +14,18 @@ export default function Summary() {
       <div className="summary-img">
         <div className="headshot-border3">
           <div className="headshot-planet3"></div>
-          <div className="headshot-border2">
-            <div className="headshot-border1">
-              <img
-                className="summary-headshot"
-                src={headshot}
-                alt={"headshot of Amanda Mayfield lookin fly"}
-              />
-            </div>
-          </div>
         </div>
+        <div className="headshot-border2">
+          <div className="headshot-planet2"></div>
+        </div>
+        <div className="headshot-border1">
+          <div className="headshot-planet1"></div>
+        </div>
+        <img
+          className="summary-headshot"
+          src={headshot}
+          alt={"headshot of Amanda Mayfield lookin fly"}
+        />
       </div>
     </section>
   );
