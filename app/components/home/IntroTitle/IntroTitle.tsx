@@ -18,7 +18,7 @@ const IntroText = () => {
 export default function IntroTitle() {
   return (
     <div className="intro-title__contain">
-      <div>
+      <div className="intro-title__title">
         <IntroText />
       </div>
       <Rocket />

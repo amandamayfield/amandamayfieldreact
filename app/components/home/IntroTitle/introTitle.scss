@@ -21,11 +21,12 @@
 
 .intro {
   &-text {
-    font-size: clamp(2rem, 10vw, 7rem);
+    font-size: clamp(2rem, 6vw, 7rem);
     font-family: fonts.$title-text;
     text-align: center;
     transition: color 0.5s ease 0s;
     font-weight: 775;
+    text-transform: uppercase;
   }
   &-text:hover:nth-child(1) {
     color: colors.$neon-blue;
@@ -46,14 +47,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    row-gap: 48px;
+    row-gap: 96px;
   }
-}
-
-@media screen and (min-width: 600px) {
-  .intro-title {
-    &__contain {
-      row-gap: 96px;
-    }
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 }
